@@ -82,7 +82,8 @@ var elBtn = document.querySelector (".form__btn");
 var elSelect = document.querySelector ("#alone");
 var elOutput = document.querySelector (".wrapper__massage");
 
-var grant = 155;
+var maxBall = 189
+var grant = 156;
 var kantrakt = 100;
 var supper = (grant / 2);
 
@@ -102,7 +103,7 @@ elBtn.addEventListener ("click", function(evt) {
   var input = elInput.value.trim();
   var number = Number(input)
 
-  if (input.length > 3 || input == ""){
+  if (input > maxBall || input == ""){
     elInput.style.borderColor = "red";
     return
   }
